@@ -1,6 +1,6 @@
   import React from "react";
 
-  export const Favorites = ({favoriteData}) => {
+  export const Favorites = ({favoriteData, removeFromFavorite}) => {
 
     console.log(favoriteData)
 
@@ -11,6 +11,7 @@
           {favoriteData?.slice(0, 4).map((cat) => (
             <div className="image-button-pair">
               <img key = {cat} className="grid-image" src={cat} alt = 'jj'/>
+              <a class="button" href="#" onClick = {() => removeFromFavorite(cat)}>Delete</a>
               
             </div>
           ))}
